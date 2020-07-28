@@ -1,11 +1,257 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>AI-mag</title>
-  </head>
-  <body>
-    <h1>AI-mag</h1>
-    <h2>The software will be put here once the paper is accepted.</h2>
-  </body>
-</html>
+<html lang="en">
 
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="AI-mag: Inductor Optimization with Finite Elements (FEM) and Neural Network (ANN)">
+  <meta name="author" content="ETH Zurich, Power Electronic Systems Laboratory, T. Guillod">
+
+  <title>AI-mag: Fast and Accurate Inductor Modeling and Design with FEM/ANN</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/landing-page.min.css" rel="stylesheet">
+  <link rel="icon" href="img/favicon.png" />
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-light bg-light static-top">
+    <div class="container">
+	    <a href="https://ethz.ch">
+			<img src="img/logo_ethz.png" height="34" alt="ETHZ Logo">
+		</a>
+		<a href="https://pes.ee.ethz.ch">
+			<img src="img/logo_pes.png" height="34" alt="PES Logo">
+		</a>		
+    </div>
+  </nav>
+  
+  <!-- Masthead -->
+  <header class="masthead text-black text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+		  <img src="img/logo_ai_mag.png" class="img-fluid" alt="AI-mag: Fast and Accurate Inductor Modeling and Design with FEM/ANN">
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+            <div class="row">
+              <div class="col-12 col-md-3 mb-2">
+			    <a href="paper.pdf" class="btn btn-block btn-lg btn-primary">Paper</a>
+              </div>
+			  <div class="col-12 col-md-3 mb-2">
+			    <a href="https://github.com/ethz-pes/AI-mag/releases/latest" class="btn btn-block btn-lg btn-primary">Download</a>
+              </div>
+              <div class="col-12 col-md-3 mb-2">
+		  		<a href="https://github.com/ethz-pes/AI-mag" class="btn btn-block btn-lg btn-primary">Git Repo.</a>
+              </div>
+              <div class="col-12 col-md-3 mb-2">
+		  		<a href="mailto:guillod@otvam.ch" class="btn btn-block btn-lg btn-primary">Contact</a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Icons Grid -->
+  <section class="features-icons bg-light text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-rocket m-auto text-primary"></i>
+            </div>
+            <h3>Lightning Fast</h3>
+            <p class="lead mb-0">Get thousands of designs per second<br>with artifical neural networks!</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-target m-auto text-primary"></i>
+            </div>
+            <h3>Extremely Accurate</h3>
+            <p class="lead mb-0">Based on accurate 3D finite element<br> thermal and magnetic simulations!</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-lock-open m-auto text-primary"></i>
+            </div>
+            <h3>Free / Open-Source</h3>
+            <p class="lead mb-0">Complete code and data<br>under BSD license!</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-graph m-auto text-primary"></i>
+            </div>
+            <h3>Pareto Fronts</h3>
+            <p class="lead mb-0">Explore the Pareto fronts<br> with a graphical user interface!</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-notebook m-auto text-primary"></i>
+            </div>
+            <h3>Scientific Paper</h3>
+            <p class="lead mb-0">Scientific background and results<br>available in a paper (ETHZ PES)!</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-settings m-auto text-primary"></i>
+            </div>
+            <h3>Technology</h3>
+            <p class="lead mb-0">Programmed in MATLAB with<br>the help of Python and COMSOL!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Showcases -->
+  <section class="showcase">
+    <div class="container-fluid p-0">
+      <div class="row no-gutters">
+        <div class="col-lg-6 order-lg-2 my-auto showcase-text">
+		  <a href="img/workflow.png">
+			<img src="img/workflow.png" class="img-fluid" alt="AI-mag Worflow">
+          </a>
+		</div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2>Hybrid FEM /ANN</h2>
+          <p class="lead mb-0">Combine the speed of neural networks (ANNs) and the accuracy of finite element (FEM) for obtaining a versatile tool for inductor computation and optimization (buck, boost, resonant, filter, etc.)</p>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6 my-auto showcase-text">
+	      <a href="img/screenshot_1.png">
+			<img src="img/screenshot_1.png" class="img-fluid" alt="AI-mag Screenshot Pareto">
+          </a>
+		</div>
+        <div class="col-lg-6 my-auto showcase-text">
+          <h2>Explore Pareto Fronts</h2>
+          <p class="lead mb-0">Explore the trade-offs (power density, mass, losses, load profile, cost, etc.) with a graphical user interface and select the optimal design.</p>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6 order-lg-2 my-auto showcase-text">
+	      <a href="img/screenshot_2.png">
+			<img src="img/screenshot_2.png" class="img-fluid" alt="AI-mag Screenshot Design">
+          </a>
+		</div>
+        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+          <h2>Select the Optimal Designs</h2>
+          <p class="lead mb-0">Get all the properties of a selected design down to the smallest detail (geometry, equivalent circuit, field, losses, temperature, etc.).</p>
+        </div>
+      </div>
+      <div class="row no-gutters">
+        <div class="col-lg-6 my-auto showcase-text">
+			<img src="img/logo_pes_ethz.png" class="img-fluid" alt="ETHZ and PES Logo">
+		</div>
+        <div class="col-lg-6 my-auto showcase-text">
+          <h2>Authors</h2>
+          <p class="lead mb-0">AI-mag was developed and brought to you by the Power Electronic Systems Laboratory at ETH Zurich. The source code and the data are under BSD license.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="call-to-action text-black text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h2 class="mb-4">Get more information!</h2>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+            <div class="row">
+              <div class="col-12 col-md-3 mb-2">
+			    <a href="paper.pdf" class="btn btn-block btn-lg btn-primary">Paper</a>
+              </div>
+			  <div class="col-12 col-md-3 mb-2">
+			    <a href="https://github.com/ethz-pes/AI-mag/releases/latest" class="btn btn-block btn-lg btn-primary">Download</a>
+              </div>
+              <div class="col-12 col-md-3 mb-2">
+		  		<a href="https://github.com/ethz-pes/AI-mag" class="btn btn-block btn-lg btn-primary">Git Repo.</a>
+              </div>
+              <div class="col-12 col-md-3 mb-2">
+		  		<a href="mailto:guillod@otvam.ch" class="btn btn-block btn-lg btn-primary">Contact</a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a href="https://linkedin.com/in/tguillod">LinkedIn </a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="https://github.com/otvam">GitHub</a>
+            </li>            
+			<li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="mailto:guillod@otvam.ch">Email</a>
+            </li>
+          </ul>
+          <p class="text-muted small mb-2 mb-lg-0">AI-mag: Inductor Optimization with FEM/ANN</p>
+          <p class="text-muted small mb-2 mb-lg-0">&copy; 2019-2020, ETH Zurich, PES, T. Guillod</p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline">
+            <li class="list-inline-item">
+              <a href="https://linkedin.com/in/tguillod">
+                <i class="fab fa-linkedin fa-2x fa-fw"></i>
+              </a>
+            </li>			
+            <li class="list-inline-item">
+              <a href="https://github.com/otvam">
+                <i class="fab fa-github fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="mailto:guillod@otvam.ch">
+                <i class="fas fa-at fa-2x fa-fw"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
